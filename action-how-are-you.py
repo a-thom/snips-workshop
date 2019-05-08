@@ -39,7 +39,7 @@ def weather_at_place_callback(hermes, intent_message):
     else:
         response = "It's fucking freezing outside."
 
-    hermes.publish_continue_session(session_id, response, INTENT_FILTER_FEELING)
+    hermes.publish_end_session(session_id, response)
 
 class SnipsConfigParser(ConfigParser.SafeConfigParser):
     def to_dict(self):
