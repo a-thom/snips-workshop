@@ -16,7 +16,7 @@ INTENT_FILTER_FEELING = [INTENT_GOOD, INTENT_BAD, INTENT_ALRIGHT]
 
 def main():
     config = read_configuration_file(CONFIG_INI)
-    owm = pyowm.OWM(config["secret"]["owm_key"])
+    owm = pyowm.OWM('baaf317d1c4cdc5ce08a98ccf825af3a')
 
     with Hermes("localhost:1883") as h:
         h.owm = owm
