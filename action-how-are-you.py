@@ -29,7 +29,7 @@ def weather_at_place_callback(hermes, intent_message):
 
     # set mood according to weather
     config = read_configuration_file(CONFIG_INI)
-    city = intent_message.slots.city.first().value
+    city = intent_message.slots.cities.first().value
 
     observation = hermes.owm.weather_at_place(city)
     w = observation.get_weather()
